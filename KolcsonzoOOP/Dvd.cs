@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KolcsonzoOOP
 {
-	internal class Dvd : IKolcsonozheto
+	internal class Dvd : IKolcsonozheto, IComparable<Dvd>
 	{
 		private string cim;
 		private int hossz; // percben.
@@ -28,6 +28,11 @@ namespace KolcsonzoOOP
 		public string MegjelenitendoNev()
 		{
 			return $"{this.cim} ({this.hossz}) perc.";
+		}
+
+		public int CompareTo(Dvd? other)
+		{
+			return this.hossz - other.hossz;
 		}
 	}
 }
