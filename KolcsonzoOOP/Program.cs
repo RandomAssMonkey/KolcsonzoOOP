@@ -30,6 +30,11 @@ foreach (var k in katalogus)
 	Console.WriteLine(k.MegjelenitendoNev()+ " ~ " + k.MeddigKolcsonozheto() + "nap.");
 }
 
+foreach (var item in dvds)
+{
+    Console.WriteLine(item.MegjelenitendoNev());
+}
+
 
 
 
